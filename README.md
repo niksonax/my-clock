@@ -1,5 +1,7 @@
 # My clock
 
+A simple clock-app, that displays current time.
+
 ## Installation
 
 ```npm install```
