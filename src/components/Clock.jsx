@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from 'react';
-
-const displayValue = (value) => (value.length === 1 ? '0' + value : value);
+import { usePageVisibility } from '../hooks/usePageVisibility.jsx';
 
 const Clock = () => {
   const [date, setDate] = useState(new Date());
 
-  const hours = date.getHours().toString();
-  const minutes = date.getMinutes().toString();
-  const seconds = date.getSeconds().toString();
+  const isVisible = usePageVisibility();
+
+  const time = date.toLocaleTimeString();
+
+  const refreshClock = () => setDate(new Date());
 
   useEffect(() => {
-    setInterval(() => setDate(new Date()), 1000);
-  }, [date]);
+    if (isVisible) {
+      const clockTimer = setInterval(refreshClock, 1000);
+
+      return () => clearInterval(clockTimer);
+    }
+  }, [isVisible]);
 
   return (
     <div>
-      <h2>
-        {displayValue(hours)}:{displayValue(minutes)}:{displayValue(seconds)}
-      </h2>
+      <h2>{time}</h2>
     </div>
   );
 };
