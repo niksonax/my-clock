@@ -20,7 +20,7 @@ const Clock = () => {
 
   return (
     <div>
-      <h2>{time}</h2>
+      <h2 data-testid="time">{time}</h2>
     </div>
   );
 };

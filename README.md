@@ -13,3 +13,7 @@ A simple clock-app, that displays current time.
 ## Development mode
 
 ```npm run start```
+
+## Run test suite
+
+```npm run test```
