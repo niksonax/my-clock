@@ -12,17 +12,13 @@ const Clock = () => {
 
   useEffect(() => {
     if (isVisible) {
-      const clockTimer = setInterval(refreshClock, 1000);
+      const clockTimer = setInterval(refreshClock, 100);
 
       return () => clearInterval(clockTimer);
     }
   }, [isVisible]);
 
-  return (
-    <div>
-      <h2 data-testid="time">{time}</h2>
-    </div>
-  );
+  return <h2 data-testid="time">{time}</h2>;
 };
 
 export default Clock;
