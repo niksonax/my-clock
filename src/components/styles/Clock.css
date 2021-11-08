@@ -14,9 +14,23 @@
 }
 
 .delete-btn {
+  background-color: tomato;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: transparent;
   color: tomato;
+  border: 2px solid tomato;
 }
 
 .toggle-btn {
+  background-color: rgb(66, 66, 66);
+  color: white;
+}
+
+.toggle-btn:hover {
+  background-color: transparent;
   color: rgb(66, 66, 66);
+  border: 2px solid rgb(66, 66, 66);
 }
