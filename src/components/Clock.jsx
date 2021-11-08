@@ -12,7 +12,7 @@ const Clock = () => {
 
   useEffect(() => {
     if (isVisible) {
-      const clockTimer = setInterval(refreshClock, 100);
+      const clockTimer = setInterval(refreshClock, 1000);
 
       return () => clearInterval(clockTimer);
     }
