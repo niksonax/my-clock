@@ -1,0 +1,22 @@
+.clock {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-btn,
+.delete-btn {
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.delete-btn {
+  color: tomato;
+}
+
+.toggle-btn {
+  color: rgb(66, 66, 66);
+}
